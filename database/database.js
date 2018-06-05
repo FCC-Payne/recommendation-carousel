@@ -3,14 +3,24 @@ var mysql = require('mysql')
 var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
-	password: ""
+	password: "",
+	database: 'rtr'
 });
 
-con.connect(function(err){
-	if (err) throw err;
-	console.log("Connected!")
-	con.query("CREATE DATABASE RTR", function (err, result){
-		if (err) throw err;
-		console.log("Result", result);
-	})
-})
+con.connect((err)=>{
+	if (err) {
+		throw err
+	};
+	console.log("Connected to db!")
+});
+
+// con.connect((err) => {
+// 	if (err) throw err;
+// 	console.log("Connected!")
+// 	con.query("SELECT * FROM products WHERE id = 5", function (err, result){
+// 		if (err) throw err;
+// 		console.log("Result", result);
+// 	})
+// });
+
+module.exports = con;
