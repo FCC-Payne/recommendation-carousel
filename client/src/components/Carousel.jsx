@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import CarouselList from './CarouselList.jsx';
 
 class Carousel extends React.Component {
@@ -15,7 +14,8 @@ class Carousel extends React.Component {
       position: 'fixed',
       //overflow: 'scroll',
       width: '100%',
-      height: '400',
+      minHeight: '200px',
+      maxHeight: '1000px',
       backgroundColor: 'bisque',
       marginLeft: '0',
       marginRight: '0'

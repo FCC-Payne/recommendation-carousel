@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import CarouselListEntries from './CarouselListEntries.jsx';
 
 class CarouselList extends React.Component {
@@ -26,8 +25,8 @@ class CarouselList extends React.Component {
       flexDirection: 'row',
       align: 'right',
       // overflow: 'hidden',
-      width: '500',
-      height: '300',
+      // width: '500',
+      // height: '300',
       backgroundColor: 'white',
       marginLeft: '0',
       marginRight: '0'

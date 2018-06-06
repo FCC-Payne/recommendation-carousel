@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import CarouselListEntries from './CarouselListEntries.jsx';
 
 class CarouselList extends React.Component {
@@ -18,7 +17,7 @@ class CarouselList extends React.Component {
     };
 
     return (
-      <div style={productsStyle}> <img src={this.props.product} width='100'/>
+      <div style={productsStyle}> <img src={this.props.product} width='80%'/>
         
       </div>
     );

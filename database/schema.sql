@@ -633,3 +633,4 @@ INSERT INTO products VALUES                                                     
      (98,'Praesent luptatum zzril delenit',79.99,299.99,'Sed diam nonummy nibh',0,98,98),
      (99,'Duis dolore te',39.99,199.99,'Tincidunt ut laoreet',0,99,99),
      (100,'Feugait nulla facilisiepsum factorial',59.99,349.99,'Dolore magna aliquam erat',0,100,100);
+     
