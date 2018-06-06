@@ -1,7 +1,6 @@
 var controller = require ('./controllers');
 var router = require('express').Router();
 
-//router.get('/', )
 router.get('/product1', controller.product.get); //for the purpose of FEC, retrieves just the first item information
 router.get('/image', controller.image.get); 
 router.get('/heart', controller.heart.get);

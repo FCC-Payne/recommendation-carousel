@@ -6,11 +6,9 @@ const router = require('./routes.js');
 
 const app = express();
 
-app.use(express.static('../public'));
+app.use(express.static('../client/dist'));
 app.use(router); //to set up router;
 
-app.listen(3004, () => {
-	console.log('Server listening on port 3004!');
-});
+app.listen(3004, () => console.log('Server listening on port 3004!'));
 
 module.exports.app = app;
