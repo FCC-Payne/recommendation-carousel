@@ -9,17 +9,20 @@ class Picture extends React.Component {
 
   render(props) {
     let image = this.props.image;
-    console.log(image)
+    //console.log(image)
     const productsStyle = {
       //flexBasis: 'auto',
       backgroundImage: `url(${image})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      backgroundSize: '150px',
+      // backgroundSize: '150px',
+      width: '130px',
+      height: '210px',
+      backgroundSize: '100%',
+      // minWidth:'50px',
+      // minHeight:'220px',
       marginLeft: '20px',
       marginRight: '20px',
-      width: '150px',
-      height: '200px',
     };
 
     return (

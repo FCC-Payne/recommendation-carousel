@@ -13,18 +13,14 @@ class CarouselListEntries extends React.Component {
       marginRight: '20px',
     };
 
-    const pStyle = {
-      marginTop: '0px',
-      padding: '0px',
-    };
-
     return (
       <div>
         <Picture image={image} />
+        <hr/>
         <div style={textStyle}>
-          <p style={pStyle}>Name Placeholder</p>
-          <p style={pStyle}>Price Placeholder</p>
-          <p style={pStyle}>Description Placeholder</p>
+          <p>Name Placeholder</p>
+          <p>Price Placeholder</p>
+          <p>Description Placeholder</p>
         </div>
       </div>
     );
