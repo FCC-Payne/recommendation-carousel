@@ -14,24 +14,25 @@ class Carousel extends React.Component {
       position: 'fixed',
       //overflow: 'scroll',
       width: '100%',
-      minHeight: '200px',
-      maxHeight: '1000px',
+      height: '30%',
+      minHeight: '300px',
+      maxHeight: '400px',
       backgroundColor: 'bisque',
-      marginLeft: '0',
-      marginRight: '0'
+      marginLeft: '0px',
+      marginRight: '0px',
     };
 
     const carouselText = {
-      marginLeft: '50',
-      marginTop: '10'
+      marginLeft: '30px',
+      marginTop: '10px'
     };
 
     return (
       <div style={carouselMain}>
         <div style={carouselText}>
           You may also like
-          <CarouselList />
         </div>
+        <CarouselList />
       </div>
     );
   }

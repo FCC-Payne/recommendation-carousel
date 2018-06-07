@@ -21,28 +21,19 @@ class CarouselList extends React.Component {
 
   render() {
     const mainListContainerStyle = {
+      alignItems: 'center',
       display: 'flex',
       flexDirection: 'row',
-      align: 'right',
-      // overflow: 'hidden',
-      // width: '500',
-      // height: '300',
+      minWidth: '800px',
+      minHeight: '200px',
       backgroundColor: 'white',
-      marginLeft: '0',
-      marginRight: '0'
-    };
-
-    const productsStyle = {
-      display: 'inline',
-      overflow: 'scroll',
-      marginLeft: '10',
-      marginRight: '10'
+      justifyContent: 'center',
     };
 
     return (
       <div style={mainListContainerStyle} >
         {this.state.products.map((elem, i)=>{
-          return <div key={elem + i} style={productsStyle}><CarouselListEntries product={elem} /></div>
+          return <div key={elem + i}><CarouselListEntries product={elem} /></div>
         })}
       </div>
     );

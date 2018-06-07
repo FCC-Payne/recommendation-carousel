@@ -1,27 +1,34 @@
 import React from 'react';
-import CarouselListEntries from './CarouselListEntries.jsx';
+import Picture from './Picture.jsx'
 
-class CarouselList extends React.Component {
+class CarouselListEntries extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   render(props) {
-    const productsStyle = {
-      display: 'inline',
-      overflow: 'scroll',
-      height: '300 px',
-      width: '200 px',
-      backgroundColor: 'white'
+    let image = this.props.product;
+    const textStyle = {
+      marginLeft: '20px',
+      marginRight: '20px',
+    };
+
+    const pStyle = {
+      marginTop: '0px',
+      padding: '0px',
     };
 
     return (
-      <div style={productsStyle}> <img src={this.props.product} width='80%'/>
-        
+      <div>
+        <Picture image={image} />
+        <div style={textStyle}>
+          <p style={pStyle}>Name Placeholder</p>
+          <p style={pStyle}>Price Placeholder</p>
+          <p style={pStyle}>Description Placeholder</p>
+        </div>
       </div>
     );
   }
 }
 
-export default CarouselList;
+export default CarouselListEntries;
