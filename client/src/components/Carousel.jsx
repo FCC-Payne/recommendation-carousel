@@ -1,6 +1,6 @@
 import React from 'react';
 import CarouselList from './CarouselList.jsx';
-import axios from 'axios'
+import axios from 'axios';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -13,33 +13,24 @@ class Carousel extends React.Component {
 
   componentDidMount() {
     var currentProduct = 1
-    var newState = []
+    var newState = [];
     axios.get(`/product/id/${currentProduct}`)
     .then((response) => {
       for (let i = 1; i <= 10; i++){
         newState.push(response.data[0]['product_id_' + i])
       }
-      //console.log('the state using iteration: ', newState)
       this.setState({ 
         currentProduct: response.data[0].product_id,
         recommendations: newState 
       });
-      //console.log('this is current check: ',this.state)
     });
   }
 
-  //Saving below for future reference***
-  //use componentDidUpdate to check for asynchronous update?
-  // componentDidUpdate(prevProps, prevState) {
-  //   if(this.state.currentProduct !== prevState.currentProduct) {
-  //     console.log('componentDidUpdate works and the current state is: ', this.state)
-  //   }
-  // }
+  //For future reference: use componentDidUpdate for cleaner async update?
 
   render() {
     const carouselMain = {
       position: 'fixed',
-      // overflow: 'scroll',
       width: '100%',
       height: '30%',
       minHeight: '400px',

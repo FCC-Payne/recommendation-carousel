@@ -8,7 +8,7 @@ class CarouselListEntries extends React.Component {
     this.state = {
       images: null,
       product: null
-    }
+    };
   }
 
   componentDidMount() {
@@ -26,25 +26,25 @@ class CarouselListEntries extends React.Component {
         product_description: response.data[0].product_description,
         product_rent_price: response.data[0].rent_price,
         product_retail_price: response.data[0].retail_price,
-        product_my_heart: response.data[0].my_heart, //this is inside join table -- should not modify this
-      }
+        product_my_heart: response.data[0].my_heart, //future reference: this is inside join table -- should not modify this
+      };
       this.setState({
         images: imageLinks,
         product: productInfo,
-      })
+      });
       console.log('this is the the image', this.state.images)
-    })
+    });
   }
 
   render(props) {
-    //let image = this.props.product;
     const textStyle = {
       marginLeft: '20px',
       marginRight: '20px',
+      marginTop: '-220px',
     };
-
+  
     return (
-      <div>
+      <div id="listEntry">
         {this.state.images === null ?
         <p>LOADING</p>:
         <Picture image={this.state.images} />
@@ -54,11 +54,11 @@ class CarouselListEntries extends React.Component {
           {this.state.product === null ?
           <p>LOADING</p>:
           <div>
-          <p id="name">{this.state.product.product_name}</p>
-          <p id="description">{this.state.product.product_description}</p>
-          <div id="price">{this.state.product.product_rent_price}</div>
-          <div id="separator">&nbsp;|&nbsp;</div>
-          <div id="quietPrice">{this.state.product.product_retail_price}&nbsp;retail</div>
+            <p id="name">{this.state.product.product_name}</p>
+            <p id="description">{this.state.product.product_description}</p>
+            <div id="price">${this.state.product.product_rent_price}</div>
+            <div id="separator">&nbsp;|&nbsp;</div>
+            <div id="quietPrice">${this.state.product.product_retail_price}&nbsp;retail</div>
           </div>
           }
         </div>

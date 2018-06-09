@@ -3,6 +3,11 @@
   src: url('./Engravers\'\ Gothic\ BT.ttf')
 }
 
+@font-face{
+  font-family: 'swansea';
+  src: url('./SWANSE__.TTF');
+}
+
 html, body{
   margin: 0;
   padding: 0;
@@ -18,9 +23,12 @@ hr{
   border:0;
   width: 90%;
   border-bottom:1px solid lightgrey;
+  margin-top: -1040px;
 }
 
 #price{
+  font-size: 12px;
+  font-family: 'swansea';
   display: inline;
 }
 
@@ -28,22 +36,96 @@ hr{
   color: grey;
   display: inline;
 }
+
 #name{
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'EngraversGothicBT';
-  text-transform: 'uppercase';
+  text-transform: uppercase;
+  margin-top: 230px;
 }
+
 #description{
-  font-size: 14px;
+  font-size: 12px;
+  font-family: 'swansea';
 }
 
 #quietPrice{
   border-right:1 lightgray;
   display: inline;
   color: lightgray;
-  font-size: 14px;
+  font-family: 'swansea';
+  font-size: 12px;
 }
 
-#image {
-  transition: background 1s ease-in-out;
+/* #image1 {
+  position: 'relative';
+  left: 0;
+  background-repeat: 'no-repeat';
+  background-position: 'center';
+  width: '130px';
+  height: '210px';
+  background-size: '100%';
+  margin-left: '20px';
+  margin-right: '20px';
 }
+#image2 {
+  position: relative;
+  top: -210px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 210px;
+  background-size: 100%;
+  margin-left: 20px;
+  margin-right: 20px';
+}
+
+#image3 {
+  position: relative;
+  top: -525px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 420px;
+  background-size: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+} */
+
+/* #image4 {
+  position: relative;
+  top: -525px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 420px;
+  background-size: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+} */
+#listEntry:hover #image1{
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 4.5s;
+  opacity: 0;
+}
+#listEntry:hover #image2{
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 3s;
+  opacity: 0;
+}
+#listEntry:hover #image3{
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 1.5s;
+  opacity: 0;
+}
+#listEntry:hover #image4{
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0s;
+  opacity: 0;
+}
+/* 
+#image1{
+} */
+/* #image1:hover{
+  opacity:0
+} */
