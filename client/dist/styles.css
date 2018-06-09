@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'EngraversGothicBT';
+  src: url('./Engravers\'\ Gothic\ BT.ttf')
+}
+
 html, body{
   margin: 0;
   padding: 0;
@@ -13,4 +18,32 @@ hr{
   border:0;
   width: 90%;
   border-bottom:1px solid lightgrey;
+}
+
+#price{
+  display: inline;
+}
+
+#separator{
+  color: grey;
+  display: inline;
+}
+#name{
+  font-size: 12px;
+  font-family: 'EngraversGothicBT';
+  text-transform: 'uppercase';
+}
+#description{
+  font-size: 14px;
+}
+
+#quietPrice{
+  border-right:1 lightgray;
+  display: inline;
+  color: lightgray;
+  font-size: 14px;
+}
+
+#image {
+  transition: background 1s ease-in-out;
 }

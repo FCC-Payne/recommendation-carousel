@@ -7,31 +7,36 @@ class CarouselList extends React.Component {
     super(props);
     this.state = {
       recommendations: [],
-      products: [
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/100-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/101-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/102-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/103-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/104-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/105-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/106-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/107-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/108-1.jpeg',
-        'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/109-1.jpeg',
-      ]
+      // products: [
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/100-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/101-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/102-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/103-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/104-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/105-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/106-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/107-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/108-1.jpeg',
+      //   'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/109-1.jpeg',
+      // ]
     };
   }
 
   componentDidMount(props) {
-    var recList = []
-    this.props.recommendationData.forEach((elem)=>{
-      recList.push(elem)
-    })
-    recList.forEach((elem)=>{
-      //axios.get() use param
-    })
-    // console.log(this.props)
-    // console.log('recList', recList)
+    // var recList = []
+    // this.props.recommendationData.forEach((elem)=>{
+      // axios.get(`/image/product_id/${elem}`)
+      // .then((response)=>{
+      //   recList.push(response)
+      // })
+    //   recList.push(elem)
+    // })
+    // if (recList.length === this.props.recommendationData.length){
+    //   recList.forEach((elem)=>{
+
+    //   })
+    // }
+    this.setState({recommendations: this.props.recommendationData})
   }
 
   render() {
@@ -50,8 +55,8 @@ class CarouselList extends React.Component {
     };
 
     return (
-      <div style={mainListContainerStyle} >
-        {this.state.products.map((elem, i)=>{
+      <div style={mainListContainerStyle}>
+        {this.state.recommendations.map((elem, i)=>{
           return <div key={elem + i}><CarouselListEntries product={elem} /></div>
         })}
       </div>

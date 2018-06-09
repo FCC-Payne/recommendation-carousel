@@ -1,10 +1,10 @@
 var models = require('../models');
 
 module.exports = {
-
-  image: {
+    
+  product: {
     get: (req, res) => {
-      models.image.get((err, results)=>{
+      models.product.get(req, (err, results)=>{
         if (err) {
           res.status(500).send(err);
         }
@@ -12,10 +12,10 @@ module.exports = {
       });
     }
   },
-    
-  product: {
+
+  image: {
     get: (req, res) => {
-      models.product.get((err, results)=>{
+      models.image.get(req, (err, results)=>{
         if (err) {
           res.status(500).send(err);
         }
