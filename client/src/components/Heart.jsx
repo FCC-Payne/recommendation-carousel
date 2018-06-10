@@ -26,7 +26,7 @@ class Heart extends React.Component {
   }
   
   handleClickHeart(props) {
-    console.log('clicked heart for ' + this.props.productId + ' and heart in db is: ' + this.state.heart)
+    console.log('clicked heart for ' + this.props.productId + ' and the heart in the db before the change was: ' + this.state.heart)
     if (this.state.heart === 1){
       axios.post(`/remove_heart/${this.props.productId}`)
       this.setState({
