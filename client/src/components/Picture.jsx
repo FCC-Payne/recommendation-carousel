@@ -13,7 +13,7 @@ class Picture extends React.Component {
     let image = this.props.image;
     var productImage1 = {
       position: 'relative',
-      background: `url(../../../database/photos/100-1.jpeg)`, //changed from url(${image[0]}) to conserve GET request from S3
+      background: `url(${image[0]})`, //changed from url(${image[0]}) to conserve GET request from S3
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       width: '130px',
@@ -26,7 +26,7 @@ class Picture extends React.Component {
     var productImage2 = {
       position: 'relative',
       top: '-210px',
-      background: `url(../../../database/photos/100-1.jpeg)`,//changed from url(${image[1]}) to conserve GET request from S3
+      background: `url(${image[1]})`,//changed from url(${image[1]}) to conserve GET request from S3
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       width: '130px',
@@ -39,7 +39,7 @@ class Picture extends React.Component {
     var productImage3 = {
       position: 'relative',
       top: '-525px',
-      background: `url(../../../database/photos/100-1.jpeg)`,//changed from url(${image[2]}) to conserve GET request from S3
+      background: `url(${image[2]})`,//changed from url(${image[2]}) to conserve GET request from S3
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       width: '130px',
@@ -52,7 +52,7 @@ class Picture extends React.Component {
     var productImage4 = {
       position: 'relative',
       top: '-945px',
-      background: `url(../../../database/photos/100-1.jpeg)`,//changed from url(${image[3]}) to conserve GET request from S3
+      background: `url(${image[3]})`,//changed from url(${image[3]}) to conserve GET request from S3
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       width: '130px',
