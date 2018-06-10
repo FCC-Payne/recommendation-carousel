@@ -3,8 +3,8 @@ var db = require('../../database/database.js');
 module.exports = {
     
   product: {
-    get: function (callback) {
-      var queryProducts = 'SELECT * FROM products LEFT JOIN (recommendation, images) ON (recommendation.id = products.recommendation_id AND images.id = products.images_id) WHERE products.id = 1';
+    get: function (req, callback) {
+      var queryProducts = `SELECT * FROM products LEFT JOIN (recommendation, images) ON (recommendation.id = products.recommendation_id AND images.id = products.images_id) WHERE products.id = ${req.params.currentProduct}`;
       db.query(queryProducts, (err, results) => {
         callback(err, results);
       });
@@ -12,8 +12,8 @@ module.exports = {
   },
     
   image: {
-    get: function (callback) {
-      var queryImage = 'SELECT * FROM images LEFT JOIN products ON products.id = images.product_id WHERE product_id = 1';
+    get: function (req, callback) {
+      var queryImage = `SELECT * FROM images LEFT JOIN products ON products.id = images.product_id WHERE product_id = ${req.params.image}`;
       db.query(queryImage, (err, results) => {
         callback(err, results);
       });
