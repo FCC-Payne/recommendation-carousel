@@ -1,7 +1,7 @@
 import React from 'react';
 import CarouselListEntries from './CarouselListEntries.jsx';
-import Scroll from './Scroll.jsx'
-import axios from 'axios'
+import Scroll from './Scroll.jsx';
+import axios from 'axios';
 
 class CarouselList extends React.Component {
   constructor(props) {
