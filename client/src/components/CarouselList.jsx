@@ -11,8 +11,8 @@ class CarouselList extends React.Component {
       currentContainerMargin: '5px', 
       currentContainerPosition: 0,
     };
-    this.handleClickNext = this.handleClickNext.bind(this)
-    this.handleClickPrevious = this.handleClickPrevious.bind(this)
+    this.handleClickNext = this.handleClickNext.bind(this);
+    this.handleClickPrevious = this.handleClickPrevious.bind(this);
   }
   
   componentDidMount(props) {
