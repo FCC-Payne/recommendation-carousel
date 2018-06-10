@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS products
     rent_price decimal(12,2), 
     retail_price decimal(12,2), 
     product_description varchar(50), 
-    my_heart binary(1));
+    my_heart int(1));
 
 CREATE TABLE IF NOT EXISTS recommendation
     (id int auto_increment primary key,

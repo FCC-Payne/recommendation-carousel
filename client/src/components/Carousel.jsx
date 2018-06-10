@@ -7,7 +7,7 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       currentProduct: null,
-      recommendations: null
+      recommendations: null,
     };
   }
 
@@ -17,11 +17,11 @@ class Carousel extends React.Component {
     axios.get(`/product/id/${currentProduct}`)
     .then((response) => {
       for (let i = 1; i <= 10; i++){
-        newState.push(response.data[0]['product_id_' + i])
+        newState.push(response.data[0]['product_id_' + i]);
       }
       this.setState({ 
         currentProduct: response.data[0].product_id,
-        recommendations: newState 
+        recommendations: newState,
       });
     });
   }
@@ -37,7 +37,7 @@ class Carousel extends React.Component {
       maxHeight: '500px',
       marginLeft: '0px',
       marginRight: '0px',
-      backgroundColor: 'bisque',
+      backgroundColor: 'white',
     };
     
     const carouselText = {

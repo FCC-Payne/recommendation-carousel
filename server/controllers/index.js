@@ -48,22 +48,22 @@ module.exports = {
     
   add_heart: {
     post: (req, res) => {
-      models.add_heart.post((err, results)=>{
+      models.add_heart.post(req, (err, results)=>{
         if (err) {
           res.status(500).send(err);
         }
-        res.sendStatus(201);
+        res.send(results);
       });
     }
   },
 
   remove_heart: {
     post: (req, res) => {
-      models.remove_heart.post((err, results)=>{
+      models.remove_heart.post(req, (err, results)=>{
         if (err) {
           res.status(500).send(err);
         }
-        res.SendStatus(201);
+        res.send(results);
       });
     }
   }

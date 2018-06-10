@@ -43,8 +43,9 @@ module.exports = {
   },
 
   add_heart: {
-    post: function (callback) {
-      var queryHeart; //= 'SELECT * FROM images LEFT JOIN products ON products.id = images.product_id;'
+    post: function (req, callback) {
+        console.log('posted: ', req.params)
+      var queryHeart = `UPDATE products SET my_heart = '1' WHERE id = ${req.params.productToAdd}`; //= 'SELECT * FROM images LEFT JOIN products ON products.id = images.product_id;'
       //somehow change the specific my_heart from 0 to 1
       db.query(queryHeart, (err, results) => {
         callback(err, results);
@@ -53,9 +54,9 @@ module.exports = {
   },
 
   remove_heart: {
-    post: function (callback) {
-      var queryHeart; //change my_heart from 1 to 0
-            
+    post: function (req, callback) {
+        console.log('posted to remove', req.params)
+        var queryHeart = `UPDATE products SET my_heart = '0' WHERE id = ${req.params.productToRemove}`; //change my_heart from 1 to 0
       db.query(queryHeart, (err, results) => {
         callback(err, results);
       });
