@@ -57,75 +57,76 @@ hr{
   font-size: 12px;
 }
 
-/* #image1 {
-  position: 'relative';
-  left: 0;
-  background-repeat: 'no-repeat';
-  background-position: 'center';
-  width: '130px';
-  height: '210px';
-  background-size: '100%';
-  margin-left: '20px';
-  margin-right: '20px';
-}
-#image2 {
-  position: relative;
-  top: -210px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 130px;
-  height: 210px;
-  background-size: 100%;
-  margin-left: 20px;
-  margin-right: 20px';
+#listEntry:hover #image0{
+
 }
 
-#image3 {
-  position: relative;
-  top: -525px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 130px;
-  height: 420px;
-  background-size: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-} */
-
-/* #image4 {
-  position: relative;
-  top: -525px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 130px;
-  height: 420px;
-  background-size: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-} */
 #listEntry:hover #image1{
-  transition: opacity 0.5s ease-in-out;
+  /* transition: opacity 0.5s ease-in-out;
   transition-delay: 4.5s;
-  opacity: 0;
+  opacity: 0; */
 }
+
 #listEntry:hover #image2{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 3s;
   opacity: 0;
 }
+
 #listEntry:hover #image3{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 1.5s;
   opacity: 0;
 }
+
 #listEntry:hover #image4{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 0s;
   opacity: 0;
 }
-/* 
-#image1{
-} */
-/* #image1:hover{
-  opacity:0
-} */
+
+.next-arrow{
+  display:block;
+  position: absolute;
+  background-image: url("./sprites/001-next.svg");
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
+  left: 885px;
+  top: 130px;
+}
+
+.next-arrow:hover{
+  display:block;
+  position: absolute;
+  background-image: url("./sprites/001-next.svg");
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
+  left: 885px;
+  top: 130px;
+  opacity: 0.5;
+}
+
+.previous-arrow{
+  display:block;
+  position: absolute;
+  background-image: url("./sprites/002-back.svg");
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
+  left: 0px;
+  top: 130px;
+}
+
+.previous-arrow:hover{
+  display:block;
+  position: absolute;
+  background-image: url("./sprites/002-back.svg");
+  width: 64px;
+  height: 64px;
+  background-size: 100%;
+  left: 0px;
+  top: 130px;
+  opacity: 0.5;
+}
