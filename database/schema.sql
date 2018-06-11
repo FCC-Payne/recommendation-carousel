@@ -5,14 +5,6 @@ CREATE TABLE IF NOT EXISTS images
     image_link varchar(100),
     product_id int);
 
-CREATE TABLE IF NOT EXISTS products 
-    (id int auto_increment primary key, 
-    product_name varchar(50), 
-    rent_price decimal(12,2), 
-    retail_price decimal(12,2), 
-    product_description varchar(50), 
-    my_heart int(1));
-
 CREATE TABLE IF NOT EXISTS recommendation
     (id int auto_increment primary key,
     product_id_1 int,
@@ -26,9 +18,21 @@ CREATE TABLE IF NOT EXISTS recommendation
     product_id_9 int,
     product_id_10 int);
 
+CREATE TABLE IF NOT EXISTS products 
+    (id int auto_increment primary key, 
+    product_name varchar(50), 
+    rent_price decimal(12,2), 
+    retail_price decimal(12,2), 
+    product_description varchar(50), 
+    my_heart int(1),
+    recommendation_id int(11),
+    images_id int(11),
+    FOREIGN KEY (recommendation_id) REFERENCES recommendation(id),
+    FOREIGN KEY (images_id) REFERENCES images(id)
+    );
 
 Insert into images values
-    (1,'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/100-1.jpeg',1),
+     (1,'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/100-1.jpeg',1),
      (2,'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/100-2.jpeg',1),
      (3,'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/100-3.jpeg',1),
      (4,'https://s3-us-west-1.amazonaws.com/hr-fec-proj/FEC+Images/100-4.jpeg',1),
