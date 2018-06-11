@@ -21,6 +21,7 @@
 *.zip
 node_modules
 database/photos
+client/dist/bundle.js
 
 # Logs and databases #
 ######################
