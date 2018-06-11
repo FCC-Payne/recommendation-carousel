@@ -12,7 +12,7 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    var currentProduct = 1
+    var currentProduct = 1;
     var newState = [];
     axios.get(`/product/id/${currentProduct}`)
     .then((response) => {
