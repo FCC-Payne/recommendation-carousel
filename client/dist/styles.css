@@ -1,91 +1,97 @@
-@font-face{
+/* CarouselListEntries */
+@font-face{ 
   font-family: 'EngraversGothicBT';
   src: url('./Engravers\'\ Gothic\ BT.ttf')
 }
 
+/* CarouselListEntries */
 @font-face{
   font-family: 'swansea';
   src: url('./SWANSE__.TTF');
 }
 
-html, body{
+/* index.html -- to make default margin/padding 0 */
+body, p{
   margin: 0;
   padding: 0;
 }
 
-p{
-  margin: 0;
-}
-
-hr{
+/* CarouselListEntries */
+/* hr{
   margin-left: 10px;
   padding: 0px;
   border:0;
   width: 90%;
   border-bottom:1px solid lightgrey;
   margin-top: -1040px;
-}
+} */
 
-#price{
+CarouselListEntries
+/* #price{
   font-size: 12px;
   font-family: 'swansea';
   display: inline;
-}
+} */
 
-#separator{
+/* CarouselListEntries */
+/* #separator{
   color: grey;
   display: inline;
-}
+} */
 
-#name{
+/* CarouselListEntries */
+/* #name{
   font-size: 10px;
   font-family: 'EngraversGothicBT';
   text-transform: uppercase;
   margin-top: 230px;
-}
+} */
 
-#description{
+/* CarouselListEntries */
+/* #description{
   font-size: 12px;
   font-family: 'swansea';
-}
+} */
 
-#quietPrice{
+/* CarouselListEntries */
+/* #quietPrice{
   border-right:1 lightgray;
   display: inline;
   color: lightgray;
   font-family: 'swansea';
   font-size: 12px;
-}
+} */
 
-#listEntry:hover #image0{
-
-}
-
-#listEntry:hover #image1{
-  /* transition: opacity 0.5s ease-in-out;
+/* CarouselListEntries, but image tag in Picture.jsx   NOT USED*/
+/* #listEntry:hover #image1{
+  transition: opacity 0.5s ease-in-out;
   transition-delay: 4.5s;
-  opacity: 0; */
-}
+  opacity: 0; 
+} */
 
+/* CarouselListEntries, but image tag in Picture.jsx */
 #listEntry:hover #image2{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 3s;
   opacity: 0;
 }
 
+/* CarouselListEntries, but image tag in Picture.jsx */
 #listEntry:hover #image3{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 1.5s;
   opacity: 0;
 }
 
+/* CarouselListEntries, but image tag in Picture.jsx */
 #listEntry:hover #image4{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 0s;
   opacity: 0;
 }
 
-.next-arrow{
+/* Scroll.jsx */
+/* .next-arrow{
   display:block;
   position: absolute;
   background-image: url("./sprites/001-next.svg");
@@ -94,8 +100,9 @@ hr{
   background-size: 100%;
   left: 885px;
   top: 130px;
-}
+} */
 
+/* Scroll.jsx */
 .next-arrow:hover{
   display:block;
   position: absolute;
@@ -108,7 +115,8 @@ hr{
   opacity: 0.5;
 }
 
-.previous-arrow{
+/* Scroll.jsx */
+/* .previous-arrow{
   display:block;
   position: absolute;
   background-image: url("./sprites/002-back.svg");
@@ -117,8 +125,9 @@ hr{
   background-size: 100%;
   left: 0px;
   top: 130px;
-}
+} */
 
+/* Scroll.jsx */
 .previous-arrow:hover{
   display:block;
   position: absolute;

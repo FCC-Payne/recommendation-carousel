@@ -1,6 +1,7 @@
 import React from 'react';
 import CarouselListEntries from './CarouselListEntries.jsx';
 //found interesting bug on Rent the Runway -- when image change fading image seems to be first one no matter what the previous image were. 
+
 class Picture extends React.Component {
   constructor(props) {
     super(props);

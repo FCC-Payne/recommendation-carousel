@@ -12,7 +12,7 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    let currentProduct = window.location.pathname.substr(1) || 1;
+    let currentProduct = window.location.pathname.substr(1);
     let newState = [];
     axios.get(`/product/id/${currentProduct}`)
       .then((response) => {
@@ -20,7 +20,7 @@ class Carousel extends React.Component {
           newState.push(response.data[0]['product_id_' + i]);
         }
         this.setState({ 
-          currentProduct: response.data[0].product_id,
+          currentProduct: currentProduct,
           recommendations: newState,
         });
       }).catch((e) => {console.log('Logs problem: ', e); });
