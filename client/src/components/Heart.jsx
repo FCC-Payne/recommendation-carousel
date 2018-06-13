@@ -6,7 +6,7 @@ class Heart extends React.Component {
     super(props);
     this.state = {
       heart: this.props.myHeart,
-      style: "./sprites/002-unheart.svg"
+      style: './sprites/002-unheart.svg'
     };
     this.handleClickHeart = this.handleClickHeart.bind(this)
   }
@@ -15,12 +15,12 @@ class Heart extends React.Component {
     if (this.props.myHeart === 1) {
       this.setState({
         heart: this.props.myHeart,
-        style: "./sprites/001-heart.svg"
+        style: './sprites/001-heart.svg'
       });
     } else {
       this.setState({
         heart: this.props.myHeart,
-        style: "./sprites/002-unheart.svg"
+        style: './sprites/002-unheart.svg'
       });
     }
   }
@@ -31,33 +31,33 @@ class Heart extends React.Component {
       axios.post(`/remove_heart/${this.props.productId}`);
       this.setState({
         heart: 0,
-        style: "./sprites/002-unheart.svg",
+        style: './sprites/002-unheart.svg',
       });
     } else {
       axios.post(`/add_heart/${this.props.productId}`);
       this.setState({
         heart: 1,
-        style: "./sprites/001-heart.svg",
+        style: './sprites/001-heart.svg',
       });
     }
   }
 
   render(props) {
-    var currentStyle = {
+    let currentStyle = {
       backgroundImage: `url(${this.state.style})`,
-      position: 'inline',
+      position: 'relative',
       display: 'flex',
       overflow: 'hidden',
-      top: '170px',
+      top: '0px',
       marginTop: '20px',
       marginLeft: '140px',
       width: '20px',
       height: '20px',
-      zIndex: '999',
+      zIndex: '999'
     };
 
     return (
-      <div className="myHeart" style={currentStyle} onClick={this.handleClickHeart}></div>
+      <div className="myHeart" style={currentStyle} onClick={this.handleClickHeart} />
     );
   }
 }
