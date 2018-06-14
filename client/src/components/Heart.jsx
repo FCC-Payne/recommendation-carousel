@@ -46,10 +46,11 @@ class Heart extends React.Component {
     let currentStyle = {
       backgroundImage: `url(${this.state.style})`,
       position: 'relative',
+      backgroundRepeat: 'no-repeat',
       display: 'flex',
       overflow: 'hidden',
       top: '0px',
-      marginTop: '20px',
+      marginTop: '0px',
       marginLeft: '140px',
       width: '20px',
       height: '20px',

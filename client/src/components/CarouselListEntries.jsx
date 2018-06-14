@@ -2,7 +2,16 @@ import React from 'react';
 import axios from 'axios';
 import Picture from './Picture.jsx';
 import Heart from './Heart.jsx';
+import styled from 'styled-components';
+import Image4 from './Picture.jsx';
 // possible improvement over original website: consistent vertical position of price (if product name is long and uses up second line, price is shown on lower line as well, causing inconsistent price information position)
+
+export const ListEntry = styled.div`
+  position: relative;
+  height: 330px;
+  width: 100%;
+  top: 12px;
+`;
 
 class CarouselListEntries extends React.Component {
   constructor(props) {
@@ -12,7 +21,7 @@ class CarouselListEntries extends React.Component {
       product: null,
     };
   }
-  
+ 
 
   componentDidMount() {
     let currentCarouselItem = this.props.product;
@@ -50,7 +59,7 @@ class CarouselListEntries extends React.Component {
       border: '0',
       width: '90%',
       borderBottom: '1px solid lightgrey',
-      marginTop: '-1040px',
+      marginTop: '-95px', // altered
     }
 
     const price = {
@@ -85,7 +94,7 @@ class CarouselListEntries extends React.Component {
     }
 
     return (
-      <div id="listEntry">
+      <ListEntry className="listEntry">
         {this.state.images === null ?
           <p>LOADING</p> :
           <div>
@@ -110,7 +119,7 @@ class CarouselListEntries extends React.Component {
             </div>
           }
         </div>
-      </div>
+      </ListEntry>
     );
   }
 }

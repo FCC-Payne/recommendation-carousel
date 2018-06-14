@@ -68,7 +68,7 @@ class CarouselList extends React.Component {
       display: 'flex',
       flexDirection: 'row',
       minWidth: '850px',
-      minHeight: '200px',
+      minHeight: '100px',
       maxWidth: '850px',
       backgroundColor: 'white',
       justifyContent: 'left',

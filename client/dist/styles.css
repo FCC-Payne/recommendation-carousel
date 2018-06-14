@@ -26,7 +26,7 @@ body, p{
   margin-top: -1040px;
 } */
 
-CarouselListEntries
+/* CarouselListEntries */
 /* #price{
   font-size: 12px;
   font-family: 'swansea';
@@ -70,25 +70,25 @@ CarouselListEntries
 } */
 
 /* CarouselListEntries, but image tag in Picture.jsx */
-#listEntry:hover #image2{
+/* #listEntry:hover #image2{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 3s;
   opacity: 0;
-}
+} */
 
 /* CarouselListEntries, but image tag in Picture.jsx */
-#listEntry:hover #image3{
+/* #listEntry:hover #image3{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 1.5s;
   opacity: 0;
-}
+} */
 
 /* CarouselListEntries, but image tag in Picture.jsx */
-#listEntry:hover #image4{
+/* #listEntry:hover #image4{
   transition: opacity 0.5s ease-in-out;
   transition-delay: 0s;
   opacity: 0;
-}
+} */
 
 /* Scroll.jsx */
 /* .next-arrow{
