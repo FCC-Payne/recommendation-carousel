@@ -1,6 +1,77 @@
 import React from 'react';
-import CarouselListEntries from './CarouselListEntries.jsx';
+import styled from 'styled-components';
 //found interesting bug on Rent the Runway -- when image change fading image seems to be first one no matter what the previous image were. 
+
+const StyledImage4 = styled.div`
+  position: relative;
+  top: 5px;
+  background: url(${props => props.image}); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 130px;
+  height: 420px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -475px;
+  &:hover {
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0s;
+    opacity: 0;
+  }
+`;
+
+const StyledImage3 = styled.div`
+  position: relative;
+  top: -50px;
+  background: url(${props => props.image}); 
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 420px;
+  background-size: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -475px;
+  &:hover {
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 1.5s;
+    opacity: 0;
+  }
+`;
+
+const StyledImage2 = styled.div`
+  position: relative;
+  top: -210px;
+  background: url(${props => props.image}); 
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 210px;
+  background-size: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  &:hover {
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 3s;
+    opacity: 0;
+  }
+`;
+
+const StyledImage1 = styled.div`
+  position: relative;
+  background: url(${props => props.image}); 
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 210px;
+  backgroundSize: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-size: contain;
+  margin-top: 0px;
+}`;
+
 class Picture extends React.Component {
   constructor(props) {
     super(props);
@@ -8,66 +79,14 @@ class Picture extends React.Component {
       opacity: 1,
     };
   }
-  
   render(props) {
     let image = this.props.image;
-    var productImage1 = {
-      position: 'relative',
-      background: `url(${image[0]})`, //changed from url(${image[0]}) to conserve GET request from S3
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      width: '130px',
-      height: '210px',
-      backgroundSize: '100%',
-      marginLeft: '20px',
-      marginRight: '20px'
-    };
-    
-    var productImage2 = {
-      position: 'relative',
-      top: '-210px',
-      background: `url(${image[1]})`,//changed from url(${image[1]}) to conserve GET request from S3
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      width: '130px',
-      height: '210px',
-      backgroundSize: '100%',
-      marginLeft: '20px',
-      marginRight: '20px'
-    };
-    
-    var productImage3 = {
-      position: 'relative',
-      top: '-525px',
-      background: `url(${image[2]})`,//changed from url(${image[2]}) to conserve GET request from S3
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      width: '130px',
-      height: '420px',
-      backgroundSize: '100%',
-      marginLeft: '20px',
-      marginRight: '20px'
-    };
-    
-    var productImage4 = {
-      position: 'relative',
-      top: '-945px',
-      background: `url(${image[3]})`,//changed from url(${image[3]}) to conserve GET request from S3
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      width: '130px',
-      height: '420px',
-      backgroundSize: '100%',
-      marginLeft: '20px',
-      marginRight: '20px'
-    };
-    
     return (
       <div>
-        <div id="image1" style={productImage1}></div>
-        <div id='image2' style={productImage2}></div>
-        <div id='image3' style={productImage3}></div>
-        <div id='image4' style={productImage4}></div>
+        <StyledImage1 className="carouselImage1" image={image[0]} />
+        <StyledImage2 className="carouselImage2" image={image[1]} />
+        <StyledImage3 className="carouselImage3" image={image[2]} />
+        <StyledImage4 className="carouselImage4" image={image[3]} />
       </div>
     );
   }

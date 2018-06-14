@@ -16,7 +16,7 @@ class CarouselList extends React.Component {
   }
   
   componentDidMount(props) {
-    this.setState({recommendations: this.props.recommendationData});
+    this.setState({ recommendations: this.props.recommendationData });
   }
   
   handleClickNext() {
@@ -26,26 +26,24 @@ class CarouselList extends React.Component {
         setTimeout(()=>{
           this.setState({
             recommendation: this.state.recommendation,
-            currentContainerMargin: (0 - i) + 'px',
+            currentContainerMargin: `${0 - i}px`,
             currentContainerPosition: 1,
-          }),
-          1
-        });
+          });
+        }, 10);
       }
     }
   }
   
   handleClickPrevious() {
-    if (this.state.currentContainerPosition === 1){
-      for(let i = 0; i < 850; i += 10){
-        setTimeout(()=>{
+    if (this.state.currentContainerPosition === 1) {
+      for (let i = 0; i < 850; i += 10) {
+        setTimeout(() => {
           this.setState({
             recommendation: this.state.recommendation,
-            currentContainerMargin: (-840 + i) + 'px',
+            currentContainerMargin: `${-840 + i}px`,
             currentContainerPosition: 0
-          }),
-          1
-        });
+          });
+        }, 10);
       }
     }
   }
@@ -65,12 +63,12 @@ class CarouselList extends React.Component {
       marginRight: '50px',
     };
 
-    var subcontainerStyle = {
+    let subcontainerStyle = {
       position: 'center',
       display: 'flex',
       flexDirection: 'row',
       minWidth: '850px',
-      minHeight: '200px',
+      minHeight: '100px',
       maxWidth: '850px',
       backgroundColor: 'white',
       justifyContent: 'left',
@@ -82,8 +80,8 @@ class CarouselList extends React.Component {
       <div id="mainListContainer" style={mainListContainerStyle}>
         <Scroll clickNext={this.handleClickNext} clickPrevious={this.handleClickPrevious}/>
         <div id="subContainer" style={subcontainerStyle}>
-        {this.state.recommendations.map((elem, i)=>{
-          return <div key={elem + i}><CarouselListEntries product={elem} /></div>
+          {this.state.recommendations.map((elem, i)=>{
+          return <div key={`${elem}` + `${i}`}><CarouselListEntries product={elem} /></div>
         })}
         </div>
       </div>
