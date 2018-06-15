@@ -14,7 +14,7 @@ class Carousel extends React.Component {
   componentDidMount() {
     let currentProduct = window.location.pathname.substr(1);
     let newState = [];
-    axios.get(`/product/id/${currentProduct}`)
+    axios.get(`http://localhost:3004/product/id/${currentProduct}`)
       .then((response) => {
         for (let i = 1; i <= 10; i++) {
           newState.push(response.data[0]['product_id_' + i]);
@@ -30,7 +30,7 @@ class Carousel extends React.Component {
 
   render() {
     const carouselMain = {
-      position: 'fixed',
+      position: 'relative',
       width: '100%',
       height: '30%',
       minHeight: '400px',

@@ -8,7 +8,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.send(results);
+        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
       });
     }
   },
@@ -19,7 +19,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.send(results);
+        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
       });
     }
   },
@@ -30,7 +30,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.send(results);
+        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
       })
     }
   },
@@ -41,7 +41,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.send(results);
+        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
       });
     }
   },
@@ -52,7 +52,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.send(results);
+        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
       });
     }
   },
@@ -63,7 +63,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.send(results);
+        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
       });
     }
   }
