@@ -60,30 +60,30 @@ class CarouselListEntries extends React.Component {
       width: '90%',
       borderBottom: '1px solid lightgrey',
       marginTop: '-95px', // altered
-    }
+    };
 
     const price = {
       fontSize: '12px',
       fontFamily: 'swansea',
       display: 'inline',
-    }
+    };
 
     const separator = {
       color: 'grey',
       display: 'inline',
-    }
+    };
 
     const name = {
       fontSize: '10px',
       fontFamily: 'EngraversGothicBT',
       textTransform: 'uppercase',
       marginTop: '230px',
-    }
+    };
 
     const description = {
       fontSize: '12px',
       fontFamily: 'swansea',
-    }
+    };
 
     const quietPrice = {
       borderRight: '1 lightgray',
@@ -91,7 +91,11 @@ class CarouselListEntries extends React.Component {
       color: 'lightgray',
       fontFamily: 'swansea',
       fontSize: '12px',
-    }
+    };
+
+    const details = {
+      lineHeight: '9px',
+    };
 
     return (
       <ListEntry className="listEntry">
@@ -110,7 +114,7 @@ class CarouselListEntries extends React.Component {
         <div style={textStyle}>
           {this.state.product === null ?
             <p>LOADING</p> :
-            <div>
+            <div style={details}>
               <p id="name" style={name}>{this.state.product.product_name}</p>
               <p id="description" style={description}>{this.state.product.product_description}</p>
               <div id="price" style={price}>${this.state.product.product_rent_price}</div>
