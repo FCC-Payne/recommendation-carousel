@@ -6,7 +6,7 @@ class Heart extends React.Component {
     super(props);
     this.state = {
       heart: this.props.myHeart,
-      style: 'http://localhost:3004/sprites/002-unheart.svg'
+      style: `http://localhost:3004/:id/sprites/002-unheart.svg`
     };
     this.handleClickHeart = this.handleClickHeart.bind(this)
   }
@@ -15,12 +15,12 @@ class Heart extends React.Component {
     if (this.props.myHeart === 1) {
       this.setState({
         heart: this.props.myHeart,
-        style: 'http://localhost:3004/sprites/001-heart.svg'
+        style: `http://localhost:3004/:id/sprites/001-heart.svg`
       });
     } else {
       this.setState({
         heart: this.props.myHeart,
-        style: 'http://localhost:3004/sprites/002-unheart.svg'
+        style: `http://localhost:3004/:id/sprites/002-unheart.svg`
       });
     }
   }
@@ -31,13 +31,13 @@ class Heart extends React.Component {
       axios.post(`http://localhost:3004/remove_heart/${this.props.productId}`);
       this.setState({
         heart: 0,
-        style: 'http://localhost:3004/sprites/002-unheart.svg',
+        style: `http://localhost:3004/:id/sprites/002-unheart.svg`,
       });
     } else {
       axios.post(`/add_heart/${this.props.productId}`);
       this.setState({
         heart: 1,
-        style: 'http://localhost:3004/sprites/001-heart.svg',
+        style: `http://localhost:3004/:id/sprites/001-heart.svg`,
       });
     }
   }

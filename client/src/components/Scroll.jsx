@@ -11,7 +11,7 @@ class Scroll extends React.Component {
   const nextArrow = {
     display:'block',
     position: 'absolute',
-    backgroundImage: 'url(http://localhost:3004/sprites/001-next.svg)',
+    backgroundImage: `url(http://localhost:3004/:id/sprites/001-next.svg)`,
     width: '64px',
     height: '64px',
     backgroundSize: '100%',
@@ -21,7 +21,7 @@ class Scroll extends React.Component {
   const previousArrow = {
     display:'block',
     position: 'absolute',
-    backgroundImage: 'url(http://localhost:3004/sprites/002-back.svg)',
+    backgroundImage: `url(http://localhost:3004/:id/sprites/002-back.svg)`,
     width: '64px',
     height: '64px',
     backgroundSize: '100%',
