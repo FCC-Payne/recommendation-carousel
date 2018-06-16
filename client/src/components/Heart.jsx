@@ -28,13 +28,13 @@ class Heart extends React.Component {
   handleClickHeart(props) {
     console.log('clicked heart for ' + this.props.productId + ' and the heart in the db before the change was: ' + this.state.heart)
     if (this.state.heart === 1) {
-      axios.post(`http://localhost:3004/remove_heart/${this.props.productId}`);
+      axios.post(`http://localhost:3004/:id/remove_heart/${this.props.productId}`);
       this.setState({
         heart: 0,
         style: `http://localhost:3004/:id/sprites/002-unheart.svg`,
       });
     } else {
-      axios.post(`/add_heart/${this.props.productId}`);
+      axios.post(`http://localhost:3004/:id/add_heart/${this.props.productId}`);
       this.setState({
         heart: 1,
         style: `http://localhost:3004/:id/sprites/001-heart.svg`,
