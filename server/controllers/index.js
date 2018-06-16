@@ -1,4 +1,5 @@
 var models = require('../models');
+const port = process.env.Port || 3004
 
 module.exports = {
     
