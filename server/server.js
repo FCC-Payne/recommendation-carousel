@@ -4,7 +4,7 @@ const db = require('../database/database.js');
 const router = require('./routes.js');
 const path = require('path');
 const morgan = require('morgan');
-const port = process.env.Port || 3004
+const port = process.env.PORT || 3004
 
 const app = express();
 
@@ -21,6 +21,6 @@ app.use(router); //to set up router;
 //   res.sendFile(path.join(__dirname + '/../client/dist/index.html'))
 // })
 
-app.listen(8081, () => console.log('Server listening on port 8081!'));
+app.listen(port, () => console.log('Server listening on port 8081!'));
 
 module.exports.app = app;
