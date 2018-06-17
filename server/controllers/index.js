@@ -1,4 +1,5 @@
 var models = require('../models');
+const port = process.env.PORT || 3004
 
 module.exports = {
     
@@ -8,7 +9,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
+        res.set({ 'Access-Control-Allow-Origin': '*' }).send(results);
       });
     }
   },
@@ -19,7 +20,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
+        res.set({ 'Access-Control-Allow-Origin': '*' }).send(results);
       });
     }
   },
@@ -30,7 +31,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
+        res.set({ 'Access-Control-Allow-Origin': '*' }).send(results);
       })
     }
   },
@@ -41,7 +42,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
+        res.set({ 'Access-Control-Allow-Origin': '*' }).send(results);
       });
     }
   },
@@ -52,7 +53,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
+        res.set({ 'Access-Control-Allow-Origin': '*' }).send(results);
       });
     }
   },
@@ -63,7 +64,7 @@ module.exports = {
         if (err) {
           res.status(500).send(err);
         }
-        res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' }).send(results);
+        res.set({ 'Access-Control-Allow-Origin': '*' }).send(results);
       });
     }
   }

@@ -1,4 +1,5 @@
 var db = require('../../database/database.js');
+const port = process.env.PORT || 3004
 
 module.exports = {
     

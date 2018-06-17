@@ -27,7 +27,7 @@ class CarouselListEntries extends React.Component {
     let currentCarouselItem = this.props.product;
     const imageLinks = [];
     let productInfo = null;
-    axios.get(`http://localhost:3004/image/product_id/${currentCarouselItem}`)
+    axios.get(`/${currentCarouselItem}/image/product_id`)
       .then((response)=>{
         response.data.forEach((elem)=>{
           imageLinks.push(elem.image_link)

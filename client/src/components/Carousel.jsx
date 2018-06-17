@@ -14,7 +14,7 @@ class Carousel extends React.Component {
   componentDidMount() {
     let currentProduct = window.location.pathname.substr(1);
     let newState = [];
-    axios.get(`http://localhost:3004/product/id/${currentProduct}`)
+    axios.get(`/${currentProduct}product/id`)
       .then((response) => {
         for (let i = 1; i <= 10; i++) {
           newState.push(response.data[0]['product_id_' + i]);
