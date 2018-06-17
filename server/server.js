@@ -10,7 +10,7 @@ const app = express();
 
 const options = {
   setHeaders: (res) => {
-    res.set({ 'Access-Control-Allow-Origin': 'http://localhost:3000' });
+    res.set({ 'Access-Control-Allow-Origin': '*' });
   },
 };
 
@@ -21,6 +21,6 @@ app.use(router); //to set up router;
 //   res.sendFile(path.join(__dirname + '/../client/dist/index.html'))
 // })
 
-app.listen(port, () => console.log('Server listening on port 8081!'));
+app.listen(port, () => console.log(`Server listening on port ${port}!`));
 
 module.exports.app = app;
